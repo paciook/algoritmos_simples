@@ -22,13 +22,9 @@ bool divide(int a, int b)
  int mayor(int a, int b)
 {
 	if (a>b)
-	{
 		return a;
-	}
 	else
-	{
 		return b;
-	}
 }
 
 // Ejercicio 2
@@ -37,9 +33,7 @@ unsigned int factorialPorCopia(int n)
 {
 	int aux = 1;
 	for(int x = 1; x <= n - 1; x++)
-	{
 		aux = aux * (x + 1);
-	}
 	return aux;
 }
 
@@ -60,14 +54,9 @@ bool esPrimo(int n)
 {
 	bool respuesta = true;
 	for (int x = 2; x < (n/2) + 1; x++)
-	{
 		if (divide(x, n))
-		{
 			respuesta = false;
-		}
-	}
-
-	return respuesta;
+	return (respuesta | (n==1));
 }
 
 // Ejercicio 5
@@ -78,12 +67,8 @@ bool esPrimo(int n)
 bool primoGemelo(int n)
 {  
 	if (esPrimo(n))
-	{
 		if (esPrimo(n - 2) or esPrimo(n + 2))
-		{
 			return true;
-		}
-	}
 	return false;
 }
 
@@ -102,18 +87,12 @@ void esCapicua(string s)
     for (int x=0; x <= s.length() - 1; x++)
     {
     	if (s[x] != s[s.length() - (1 + x)])
-    		{
-    			pal = "NO";
-    		}
+    		pal = "NO";
 
     }
     for(int x = 0; x <= s.length() - 1; x++)
-    {
         if (!isdigit(s[x]))
-        {
             num = "NO";
-        }
-    }
     cout << "Numero: " << num << ", Palindromo: " << pal <<endl;
 }
 
@@ -124,9 +103,7 @@ void esCapicua(string s)
 void numerosHasta(int n)
 {
 	for(int x = 0; x <= n; x++)
-	{
 			cout << x << " ";
-	}
 }
 
 // Ejercicio 8
@@ -140,8 +117,7 @@ void numerosHasta(int n)
 
 void escaleraSimple(int n)
 {
-	for (int x = 0; x < n+1; x++)
-	{
+	for (int x = 0; x < n+1; x++){
 		numerosHasta(x);
 		cout << endl;
 	}
@@ -158,12 +134,9 @@ void escaleraSimple(int n)
 bool esPerfecto(int n)
 {
 	int aux = 0;
-	for (int x = 1; x <= (n/2); x++)
-	{
+	for (int x = 1; x <= (n/2); x++){
 		if (divide(x, n))
-		{
 			aux = aux + x;
-		}
 	}
 	return (aux == n);
 }
@@ -178,7 +151,7 @@ bool esPerfecto(int n)
 // 1 4 6 4 1
 void pascal()
 {
-
+	return;
 }
 
 
@@ -186,7 +159,7 @@ void pascal()
 // Dado un k positivo, devolver el k-esimo numero de la susesion de fibonacci.
 long fibonacci(int k)
 {
-
+	return (long)0;
 }
 
 // Ejercicio 12 (opcional)
@@ -198,5 +171,5 @@ long fibonacci(int k)
 void golbach()
 {
 
-
+	return;
 }
